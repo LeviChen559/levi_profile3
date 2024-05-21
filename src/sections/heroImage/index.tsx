@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import HeroSahpe from "@/components/heroShape";
 import HeroText from "@/components/heroText";
+import { motion } from "framer-motion";
 
 function HeroImage() {
   return (
@@ -10,14 +11,16 @@ function HeroImage() {
       className="w-screen h-[65rem] overflow-hidden relative object-cover flex justify-center z-0 
     lg:h-[45rem] xl:h-[60rem]
     "
-    >
+    > 
+
       <Image
         src="/blue.png"
         alt=""
         fill
         objectFit="cover"
-        className="z-0  grayscale-[50%]"
-      />
+        className="z-0 grayscale-[75%]  heroImage-animation"
+        />
+      
       <svg
         className="clip-heroImage"
         viewBox="0 0 1728 508"

@@ -35,7 +35,7 @@ body {
     );
     overflow: hidden;
     background: #ecc889;
-  
+
     width: 570px;
     height: 554px;
     position: absolute;
@@ -45,9 +45,10 @@ body {
       "M110.585 0.51491C145.648 3.68093 161.734 40.4729 171.174 74.4014C179.071 102.785 175.583 133.546 152.79 152.204C125.114 174.86 87.3866 186.74 57.0198 167.847C19.1278 144.272 -10.2238 101.763 3.38485 59.2511C17.1218 16.3382 65.7239 -3.5358 110.585 0.51491Z"
     );
     overflow: hidden;
-    background:var(--main-color);
+    background: var(--main-color);
     width: 175px;
     height: 178px;
+    scale: 1;
   }
   .clip-footer {
     clip-path: path(
@@ -82,6 +83,20 @@ body {
   .clip-heroShape5-color {
     background: #dc8c73;
     transform: rotate(270deg);
+  }
+}
+.heroImage-animation {
+  animation: heroImage 30s infinite linear;
+}
+@keyframes heroImage {
+  0% {
+    scale: 1;
+    transform: translateY(0);
+  }
+  100% {
+    scale: 1.25;
+    transform: translateY(-100);
+
   }
 }
 

@@ -1,11 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Children } from "react";
+import { RiJavascriptFill } from "react-icons/ri";
 
 export interface ImageProps {
   id: number;
-  src: string;
-  alt: string;
+  children: React.ReactNode;
+  des?:string
 }
 
 const SkillItem = (props: ImageProps) => (
@@ -19,8 +21,10 @@ const SkillItem = (props: ImageProps) => (
       x: { duration: 1 },
       delay: props.id,
     }}
+    id={props.des}
   >
-    <Image src={props.src} alt={props.alt} width={72} height={72} />
+    {/* <Image src={props.src} alt={props.alt} width={72} height={72} className="scale-125" /> */}
+    {props.children }
   </motion.div>
 );
 
