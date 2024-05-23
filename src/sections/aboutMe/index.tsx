@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <div className="w-10/12 xl:w-[1280px] mb-[50px]">
+    <div className="w-10/12 w-10/12 xl:w-[1280px] mb-[50px]">
       <h5 className="text-3xl mb-[12px]">About Me</h5>
       <p>
         My transition from industrial design to web development reflects

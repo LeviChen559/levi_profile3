@@ -9,11 +9,16 @@ const kanit = Kanit({
   subsets: ["latin"],
 });
 
-const Nav = () => {
+const Nav = ({type}:{type:string}) => {
   const pathname = usePathname();
-console.log(pathname)
   return (
-    <nav className="w-full xl:w-[1200px] h-[50px] flex justify-end items-center  absolute z-10">
+    <nav
+      className={
+        type === "header"
+          ? "w-full xl:w-[1200px] h-[50px] flex justify-end items-center  absolute z-10"
+          : "w-full xl:w-[1200px] h-[50px] flex justify-center items-center "
+      }
+    >
       <div className="w-[420px] flex justify-center items-start gap-2 absolute">
         <Link href={"/about"}>
           <h5
@@ -30,9 +35,12 @@ console.log(pathname)
         |
         <Link href={"/projects"}>
           <h5
-            className={kanit.className +  (pathname === "/projects"
-            ? " text-yellow-500"
-            : " cursor-pointer hover:text-amber-300")}
+            className={
+              kanit.className +
+              (pathname === "/projects"
+                ? " text-yellow-500"
+                : " cursor-pointer hover:text-amber-300")
+            }
           >
             My Projects
           </h5>
@@ -40,9 +48,12 @@ console.log(pathname)
         |
         <Link href={"/blogs"}>
           <h5
-            className={kanit.className +  (pathname === "/blogs"
-            ? " text-yellow-500"
-            : " cursor-pointer hover:text-amber-300")}
+            className={
+              kanit.className +
+              (pathname === "/blogs"
+                ? " text-yellow-500"
+                : " cursor-pointer hover:text-amber-300")
+            }
           >
             Blogs
           </h5>
@@ -50,9 +61,12 @@ console.log(pathname)
         |
         <Link href={"/contact"}>
           <h5
-            className={kanit.className +  (pathname === "/contact"
-            ? " text-yellow-500"
-            : " cursor-pointer hover:text-amber-300")}
+            className={
+              kanit.className +
+              (pathname === "/contact"
+                ? " text-yellow-500"
+                : " cursor-pointer hover:text-amber-300")
+            }
           >
             Contact Me
           </h5>

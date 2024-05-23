@@ -4,7 +4,9 @@
 
 :root {
   --main-background: #303e54;
+  --main-background-light: #f7ece2;
   --main-color: #f7ece2;
+  --main-color-dark: #303e54;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,7 +20,13 @@ body {
   background: var(--main-background);
 }
 
+@layer components {
+  .skillset-row {
+    @apply w-full  grid grid-cols-3 p-2 grid-flow-row gap-0 md:gap-10 md:p-8 place-items-center md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6;
+  }
+}
 @layer utilities {
+
   .text-balance {
     text-wrap: balance;
   }
@@ -35,7 +43,6 @@ body {
     );
     overflow: hidden;
     background: #ecc889;
-
     width: 570px;
     height: 554px;
     position: absolute;
@@ -103,11 +110,14 @@ body {
 @media screen and (max-width: 1280px) {
   .clip-heroShape2 {
     scale: 0.7;
-  }
+  };
   .clip-heroShape3,
   .clip-heroShape4,
   .clip-heroShape5 {
     scale: 0.7;
+  };
+  .clip-skill-item {
+    scale: 0.85
   }
 }
 @media screen and (max-width: 768px) {
@@ -118,5 +128,8 @@ body {
   .clip-heroShape4,
   .clip-heroShape5 {
     scale: 0.75;
+  }
+  .clip-skill-item {
+    scale: 0.7;
   }
 }
