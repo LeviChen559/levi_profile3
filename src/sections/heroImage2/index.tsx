@@ -3,16 +3,21 @@ import React from "react";
 import Image from "next/image";
 import HeroSahpe from "@/components/heroShape";
 import HeroText from "@/components/heroText";
+import { motion } from "framer-motion";
 
-function HeroImage() {
+ interface heroImageProps{
+   title: React.ReactNode;
+   img:string
+ }
+const HeroImage=(props:heroImageProps)=> {
   return (
     <div
-      className="w-screen h-[65rem] overflow-hidden relative object-cover flex justify-center z-0 
-    lg:h-[45rem] xl:h-[60rem]
+      className="w-screen h-[30rem] overflow-hidden relative object-cover flex justify-center z-0 
+    lg:h-[40rem] xl:h-[50rem]
     "
     >
       <Image
-        src="/blue.png"
+        src={props.img}
         alt=""
         fill
         objectFit="cover"
@@ -32,19 +37,8 @@ function HeroImage() {
           style={{ fill: "var(--main-background)" }}
         ></path>
       </svg>
-      <div className="w-8/12 flex justify-around flex-col  h-[55rem] md:w-[768px] md:flex-row lg:h-[45rem] xl:h-[50rem] md:justify-center  z-10 xl:w-[1280px]">
-        <HeroSahpe />
-        <HeroText
-          title={
-            <>
-              Innovative Web
-              <br />
-              Design & Development
-            </>
-          }
-          subTitle1=" I am Levi Chen."
-          subTitle2=" Front-end Developer"
-        />
+      <div className="w-8/12 flex justify-around flex-col  h-[25rem] md:w-[768px] md:flex-row lg:h-[45rem] xl:h-[50rem] md:justify-center  z-10 xl:w-[1280px]">
+        <HeroText  title={props.title}/>
       </div>
     </div>
   );

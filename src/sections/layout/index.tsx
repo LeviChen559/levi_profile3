@@ -4,9 +4,9 @@ import Footer from "../footer";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="w-full h-full flex justify-center relative">
+    <div className="w-full h-full flex flex-col justify-center items-center relative ">
       <Nav type="header"/>
-      <main className="mb-[25rem]">{children}</main>
+      <main >{children}</main>
       <Footer/>
     </div>
   );

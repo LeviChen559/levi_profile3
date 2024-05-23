@@ -12,8 +12,15 @@ const kanit = Kanit({
   display: "swap",
   subsets: ["latin"],
 });
+interface props {
+  title: React.ReactNode;
+  subTitle1?: string;
+  subTitle2?: string;
 
-const HeroText = () => (
+
+}
+
+const HeroText = (props:props) => (
   <div className="w-full flex justify-center items-start flex-col gap-5 md:w-2/6">
     <motion.div
       initial={{ opacity: 0, scale: 1, x: -100 }}
@@ -25,11 +32,8 @@ const HeroText = () => (
           molle.className +
           " text-2xl font-white leading-tight md:text-4xl xl:text-6xl "
         }
-      >
-        WEB <br />
-        Design &
-        <br />
-        Development
+      > {props.title}
+       
       </motion.h1>
     </motion.div>
     <motion.div
@@ -38,9 +42,9 @@ const HeroText = () => (
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 2, ease: "easeOut", delay: 2 }}
     >
-      <h2 className={kanit.className + " text-3xl w-full"}>I am Levi Chen.</h2>
+      <h2 className={kanit.className + " text-3xl w-full"}>{props.subTitle1}</h2>
       <h3 className={kanit.className + " text-2xl w-full"}>
-        Front-end Developer
+      {props.subTitle2}
       </h3>
       <motion.div
         animate={{ y: [0, -20, -5, -10, 0] }}

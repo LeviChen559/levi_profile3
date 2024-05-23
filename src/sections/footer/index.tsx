@@ -4,8 +4,11 @@ import Nav from "@/components/nav";
 import { MdVerticalAlignTop } from "react-icons/md";
 function Footer() {
   return (
+    
     <div
-      className="w-screen h-[35rem] overflow-hidden  absolute object-cover flex justify-center z-100 bottom-0 
+      className="w-screen h-[20rem] overflow-hidden  relative object-cover flex justify-center z-100 bottom-0  
+      md:h-[25rem]
+      xl:h-[40rem]
     "
     >
       <svg
@@ -27,6 +30,7 @@ function Footer() {
         <h6 className="text-center">© Levi Chen 2024</h6>
       </div>
     </div>
+
   );
 }
 

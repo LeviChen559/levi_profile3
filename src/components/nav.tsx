@@ -15,7 +15,7 @@ const Nav = ({type}:{type:string}) => {
     <nav
       className={
         type === "header"
-          ? "w-full xl:w-[1200px] h-[50px] flex justify-end items-center  absolute z-10"
+          ? "w-full xl:w-[1200px] h-[50px] flex justify-end items-center  absolute z-10 top-0"
           : "w-full xl:w-[1200px] h-[50px] flex justify-center items-center "
       }
     >
