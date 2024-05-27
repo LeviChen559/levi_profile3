@@ -32,7 +32,7 @@ function HeroImage() {
           style={{ fill: "var(--main-background)" }}
         ></path>
       </svg>
-      <div className="w-8/12 flex justify-around flex-col  h-[55rem] md:w-[768px] md:flex-row lg:h-[45rem] xl:h-[50rem] md:justify-center  z-10 xl:w-[1280px]">
+      <div className="w-8/12 flex justify-around flex-col  h-[55rem] md:w-[768px]  md:flex-row lg:h-[40rem] xl:h-[50rem] md:justify-center  z-10 xl:w-[1280px]">
         <HeroSahpe />
         <HeroText
           title={
@@ -44,6 +44,9 @@ function HeroImage() {
           }
           subTitle1=" I am Levi Chen."
           subTitle2=" Front-end Developer"
+          subTitle3=" Vancouver, Canada"
+
+          icon={true}
         />
       </div>
     </div>

@@ -20,6 +20,19 @@ const Nav = ({type}:{type:string}) => {
       }
     >
       <div className="w-[420px] flex justify-center items-start gap-2 absolute">
+      <Link href={"/"}>
+          <h5
+            className={
+              kanit.className +
+              (pathname === "/"
+                ? " text-yellow-500"
+                : " cursor-pointer hover:text-amber-300")
+            }
+          >
+            Home
+          </h5>
+        </Link>
+        |
         <Link href={"/about"}>
           <h5
             className={

@@ -16,12 +16,12 @@ interface props {
   title: React.ReactNode;
   subTitle1?: string;
   subTitle2?: string;
-
-
+  subTitle3?: string;
+  icon: boolean;
 }
 
 const HeroText = (props:props) => (
-  <div className="w-full flex justify-center items-start flex-col gap-5 md:w-2/6">
+  <div className="w-full flex justify-center items-start flex-col gap-5 md:w-4/6">
     <motion.div
       initial={{ opacity: 0, scale: 1, x: -100 }}
       animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -46,7 +46,10 @@ const HeroText = (props:props) => (
       <h3 className={kanit.className + " text-2xl w-full"}>
       {props.subTitle2}
       </h3>
-      <motion.div
+      <h3 className={kanit.className + " text-xl w-full"}>
+      {props.subTitle3}
+      </h3>
+      { props.icon&&<motion.div
         animate={{ y: [0, -20, -5, -10, 0] }}
         transition={{
           duration: 1,
@@ -60,7 +63,7 @@ const HeroText = (props:props) => (
           fontSize={40}
           className="mt-2 hover:text-amber-300 cursor-pointer"
         />
-      </motion.div>
+      </motion.div>}
     </motion.div>
   </div>
 );

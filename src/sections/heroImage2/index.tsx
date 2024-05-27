@@ -8,12 +8,13 @@ import { motion } from "framer-motion";
  interface heroImageProps{
    title: React.ReactNode;
    img:string
+   icon:boolean
  }
 const HeroImage=(props:heroImageProps)=> {
   return (
     <div
-      className="w-screen h-[30rem] overflow-hidden relative object-cover flex justify-center z-0 
-    lg:h-[40rem] xl:h-[50rem]
+      className="w-screen h-[30rem] overflow-hidden relative object-cover flex justify-center z-0
+    lg:h-[30rem] xl:h-[50rem]
     "
     >
       <Image
@@ -21,7 +22,7 @@ const HeroImage=(props:heroImageProps)=> {
         alt=""
         fill
         objectFit="cover"
-        className="z-0 grayscale-[85%]  heroImage-animation"
+        className="z-0 grayscale-[100%]  heroImage-animation opacity-50"
       />
 
       <svg
@@ -37,8 +38,8 @@ const HeroImage=(props:heroImageProps)=> {
           style={{ fill: "var(--main-background)" }}
         ></path>
       </svg>
-      <div className="w-8/12 flex justify-around flex-col  h-[25rem] md:w-[768px] md:flex-row lg:h-[45rem] xl:h-[50rem] md:justify-center  z-10 xl:w-[1280px]">
-        <HeroText  title={props.title}/>
+      <div className="w-8/12 flex justify-around flex-col  h-[25rem] md:w-[768px] md:flex-row lg:h-[25rem] xl:h-[50rem] md:justify-center  z-10 xl:w-[1280px]">
+        <HeroText  title={props.title} icon={props.icon}/>
       </div>
     </div>
   );

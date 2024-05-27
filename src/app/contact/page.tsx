@@ -6,7 +6,7 @@ import Nav from "@/components/nav";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between"> 
-      <HeroImage title="Contact with me" img="/contact.avif"/>
+      <HeroImage title="Contact with me" img="/contact.avif" icon={false}/>
     </main>
   );
 }

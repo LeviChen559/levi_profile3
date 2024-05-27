@@ -9,7 +9,7 @@ function Skills() {
   return (
     <div className="w-10/12 xl:w-[1280px]">
       <h5 className="text-3xl mb-[12px]">Skill set</h5>
-      <div className="skillset-row">
+      <div className="skillset-row ">
         {skillData.map(
           (skill: ImageProps) =>
             skill.des === "design" && (
@@ -19,7 +19,27 @@ function Skills() {
             )
         )}
       </div>
-      <div className="skillset-row">
+      <div className="skillset-row ">
+        {skillData.map(
+          (skill: ImageProps) =>
+            skill.des === "basic" && (
+              <SkillItem key={skill.id} id={skill.id} name={skill.name}>
+                {skill.children}
+              </SkillItem>
+            )
+        )}
+      </div>
+      <div className="skillset-row ">
+        {skillData.map(
+          (skill: ImageProps) =>
+            skill.des === "style" && (
+              <SkillItem key={skill.id} id={skill.id} name={skill.name}>
+                {skill.children}
+              </SkillItem>
+            )
+        )}
+      </div>
+      <div className="skillset-row ">
         {skillData.map(
           (skill: ImageProps) =>
             skill.des === "js" && (
@@ -29,7 +49,7 @@ function Skills() {
             )
         )}
       </div>
-      <div className="skillset-row">
+      <div className="skillset-row ">
         {skillData.map(
           (skill: ImageProps) =>
             skill.des === "react" && (
